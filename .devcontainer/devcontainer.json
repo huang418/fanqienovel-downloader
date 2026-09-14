@@ -1,0 +1,28 @@
+{
+  "name": "Fanqienovel Downloader",
+  "image": "mcr.microsoft.com/devcontainers/python:3.9",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "postCreateCommand": "pip install -r requirements.txt && echo '✅ 依赖安装完成！运行: cd src && python server.py'",
+  "forwardPorts": [12930],
+  "portsAttributes": {
+    "12930": {
+      "label": "Web Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true
+      }
+    }
+  }
+}
