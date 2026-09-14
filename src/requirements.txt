@@ -8,4 +8,5 @@ gevent
 gevent-websocket
 beautifulsoup4
 curl_cffi
-
+qrcode
+pillow
